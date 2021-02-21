@@ -1,0 +1,6 @@
+.vscode/
+People_Counter/env/
+People_Counter/app/__pycache__/
+People_Counter/app/migrations/
+People_Counter/app/videos/
+People_Counter/People_Counter/__pycache__/

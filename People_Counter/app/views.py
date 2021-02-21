@@ -9,15 +9,17 @@ def index_view(request):
     return render(request,'home.html')
 
 
-# def extract_frames():
-#     cam = cv.VideoCapture(0)
-#     __ret__,__frames__ = cam.read()
-#     return __frames__
+cam = cv.VideoCapture(0)
+
+def extract_frames():
+    __ret__,__frames__ = cam.read()
+    return __frames__
 
 
 def get_frames():
-    cam = cv.VideoCapture(0)
-    __ret__,__frames__ = cam.read()
+    # cam = cv.VideoCapture(0)
+    # __ret__,__frames__ = cam.read()
+    __frames__ = extract_frames()
     if __frames__ is not None:
         count = run(__frames__)
         ret,out = cv.imencode('.jpg',count)
